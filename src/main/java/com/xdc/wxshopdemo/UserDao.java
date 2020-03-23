@@ -3,11 +3,13 @@ package com.xdc.wxshopdemo;
 import com.xdc.wxshopdemo.generate.User;
 import com.xdc.wxshopdemo.generate.UserExample;
 import com.xdc.wxshopdemo.generate.UserMapper;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.stereotype.Service;
 
 @Service
+@SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE")
 public class UserDao {
     private final SqlSessionFactory sqlSessionFactory;
 

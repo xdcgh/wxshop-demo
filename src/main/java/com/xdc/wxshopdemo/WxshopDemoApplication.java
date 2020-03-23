@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class WxshopDemoApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(WxshopDemoApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(WxshopDemoApplication.class, args);
+    }
 }

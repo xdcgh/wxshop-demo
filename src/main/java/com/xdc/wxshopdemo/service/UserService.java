@@ -5,8 +5,8 @@ import com.xdc.wxshopdemo.generate.User;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -29,5 +29,14 @@ public class UserService {
         }
 
         return user;
+    }
+
+    /**
+     * 根据电话返回用户，如果用户不存在，返回null
+     * @param tel 电话号码
+     * @return 返回用户
+     */
+    public Optional<User> getUserByTel(String tel) {
+        return Optional.ofNullable(userDao.getUserByTel(tel));
     }
 }
